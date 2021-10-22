@@ -1,0 +1,6 @@
+spisok = input('Введите своё ФИО: ')
+spisok = spisok.split(' ')
+dlina = len(spisok)
+for x in range(dlina):
+    a = list(spisok[x])
+    print(a[0],'.', sep = '', end = ' ')
