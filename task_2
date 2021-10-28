@@ -1,1 +1,15 @@
-///
+rows=3
+columns=3
+kvadrat = [[0,0,0],[0,0,0],[0,0,0]]
+def main(kvadrat):
+    for r in range(rows):
+        for c in range(columns):
+            kvadrat[r][c] = int(input('Введите число: '))
+    if kvadrat[0][0] + kvadrat[0][1] + kvadrat[0][2] == kvadrat[1][0] + kvadrat[1][1] + kvadrat[1][2] == kvadrat[1][0] + kvadrat[1][1] + kvadrat[1][2] == kvadrat[2][0] + kvadrat[2][1] + kvadrat[2][2] == kvadrat[0][2] + kvadrat[1][2] + kvadrat[2][2] == kvadrat[0][0] + kvadrat[1][1] + kvadrat[2][2]:
+        print('Это магический квадрат Ло Шу')
+    else:
+        print ('Это не магический квадрат Ло Шу')
+    return(kvadrat)
+print('Проверка квадрата Ло Шу\nВведите числа от 1 до 9\nКаждая тройка цифр является рядом квадрата\nВводите каждое число через "enter"')
+main(kvadrat)
+print(kvadrat)
