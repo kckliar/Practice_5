@@ -1,6 +1,10 @@
 spisok = input('Введите список: ')
 spisok = spisok.split(' ')
 n = int(input('Введите число n: '))
-for x in spisok:
-    if int(x) > n:
-        print(x, end = ' ')
+c = []
+def func(c):
+    for x in spisok:
+        if int(x) > n:
+            c.append(x)
+    return c
+print('Числа больше, чем n:', func(c))
