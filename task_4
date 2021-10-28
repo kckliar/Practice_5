@@ -46,7 +46,7 @@ countries_capitals = {
 count = 0
 right = 0
 false = 0
-print('Давайте сыграем в викторину по Географии!', end='\n\n')
+print('Викторина по географии', end='\n\n')
 while count <= 9:
     random_choice = random.choice(list(countries_capitals.items())) 
     random_choice_list = list(random_choice)
@@ -55,12 +55,12 @@ while count <= 9:
     print('Введите с большой буквы столицу этой страны: ', random_choice_capital)
     answer = input()
     if answer == random_choice_country:
-        print('Вы ввели правильный ответ! Действительно, столица странцы "', random_choice_capital, '" это -', random_choice_country, end='\n\n')
+        print('Чудесно, вы ответили верно"', random_choice_capital, '" это -', random_choice_country, end='\n\n')
         right += 1
     elif answer != random_choice_country:
-        print('Увы, вы ввели неправильный ответ! На самом деле столица страны "', random_choice_capital, '" это -', random_choice_country, end='\n\n')
+        print('Оу, вы ошиблись"', random_choice_capital, '" это -', random_choice_country, end='\n\n')
         false += 1
     count += 1
-print('Подведём итоги игры!')
-print('Количество верных ответов: ', right)
-print('Количество неверных ответов: ', false)
+print('Итоги игры:')
+print('Количество правильных ответов: ', right)
+print('Количество неправильных ответов: ', false)
